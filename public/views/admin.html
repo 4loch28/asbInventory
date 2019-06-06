@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--   -->
+<html>
+  <head>
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="faviconThings/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="faviconThings/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="faviconThings/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="faviconThings/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="faviconThings/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="faviconThings/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="faviconThings/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="faviconThings/apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="faviconThings/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="faviconThings/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="faviconThings/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="faviconThings/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="faviconThings/favicon-128.png" sizes="128x128" />
+<meta name="application-name" content="&nbsp;"/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="faviconThings/mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="faviconThings/mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="faviconThings/mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="faviconThings/mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="faviconThings/mstile-310x310.png" />
+    <title>Edit</title>
+    <meta charset="utf-8" lang="en"/>
+    <style type="text/css">
+      h1 {
+        color: #000000;
+        font-family:leelawadee ui;
+        text-align:center
+      }
+      label {
+        color: #000000;
+        font-family:leelawadee ui;
+        margin-left: 5%;
+        font-size: 25px;
+      }
+      textarea {
+        width: 90%;
+        resize: vertical;
+        color: #000000;
+        font-family:leelawadee ui;
+        margin-left: 5%;
+        font-size: 18px;
+      }
+      #clear:hover, #clear:active {
+        color: #ffffff;
+        background-color: #ff0000;
+        font-family:leelawadee ui;
+      }
+      #addButton:hover, #addButton:active {
+        color: #ffffff;
+        background-color: #006635;
+        font-family:leelawadee ui;
+      }
+      #updateButton:hover, #updateButton:active {
+        color: #ffffff;
+        background-color: #006635;
+        font-family:leelawadee ui;
+      }
+      #deleteButton:hover, #deleteButton:active {
+        color: #ffffff;
+        background-color: #ff0000;
+        font-family:leelawadee ui;
+      }
+      #name {
+        width: 40%;
+        font-size: 18px
+      }
+      #price {
+        width: 40%;
+        font-size: 18px
+      }
+      #stock {
+        width: 40%;
+        font-size: 18px
+      }
+      body {
+        background-color: #006635;
+        margin-left:10%;
+        margin-right:10%
+      }
+      #backButton:hover, #backButton:active {
+        color: #ffffff;
+        background-color: #006635;
+        font-family:leelawadee ui;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  </head>
+  
+  <body onpaste="return false">  
+    <div style="background-color:#ffffff;border-radius: 25px" id="request">
+      <button id="backButton" style="border:1px solid black;margin-left: 5%;width: 12.5%;padding: 5px;margin-top:5px">Back to Home</button>
+       <form action="fileupload" method="post" enctype="multipart/form-data" autocomplete="off">
+        <h1>Product Information</h1>
+        <input id = "clear" style = "border:1px dotted red;width:25%;margin-left: 37.5%;padding:10px;margin-bottom:20px;" type="reset" name="reset" value="Clear Inputs">
+        <br>
+        <label for="name">Name:</label>
+        <input id="name" type="text" onkeypress="editKeyBoard(event, this, keybNumberAndAlpha)">
+        <br>
+        <br>
+        <label for="descri">Description:</label>
+        <br>
+        <textarea id="descri" type="text" value="" onkeypress="editKeyBoard(event, this, keybNumberAndAlpha)"></textarea>
+        <br>
+        <br>
+        <label for="price">Price:</label>
+        <input id="price" type="number" min = "0" step=".01">
+        <br>
+        <br>
+        <label for="stock">Number in Stock:</label>
+        <input id="stock" type="number" min = "0">
+        <br>
+        <br>
+        <label for="fileStuff">Product Image:</label>
+        <input id="fileStuff" type="file" name="filetoupload" accept=".jpeg,.png,.gif,.bmp,.jfif,.tiff,.heif,.svg,.jpg">
+        <br>
+        <br>
+        <input id="addButton" type="submit" value="Add Product" style = "border:1px solid black;width:50%;margin-left: 25%;padding:10px;margin-bottom:20px;" />
+      </form>
+    </div>
+    <script src = "js/admin.js"></script>
+    <script src = "js/xssRestrictions.js"></script>
+  </body>
+</html>

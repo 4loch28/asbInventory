@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<!--
+	Default Page with Table
+-->
+	<head class="notranslate">
+		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="faviconThings/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="faviconThings/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="faviconThings/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="faviconThings/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="faviconThings/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="faviconThings/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="faviconThings/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="faviconThings/apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="faviconThings/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="faviconThings/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="faviconThings/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="faviconThings/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="faviconThings/favicon-128.png" sizes="128x128" />
+<meta name="application-name" content="&nbsp;"/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="faviconThings/mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="faviconThings/mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="faviconThings/mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="faviconThings/mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="faviconThings/mstile-310x310.png" />
+		<title>Home Page</title>
+		<meta charset="utf-8" lang="en"/>
+		<style type="text/css">
+	    	h1 {
+	        	color: #000000;
+	        	font-family:leelawadee ui;
+	        	text-align:center
+	    	}	    	
+	    	body {
+	        	background-color: #006635;
+	    	}
+	    	table {
+	    		table-layout: fixed;
+	    		overflow: auto;
+	    	}
+	    	td input {
+			    width: 100%;
+			    box-sizing: border-box;
+			}
+	    	#addProduct:hover, #addProduct:active {
+		        color: #ffffff;
+		        background-color: #006635;
+		        font-family:leelawadee ui;
+	      	}
+	      	#logout:hover, #logout:active {
+		        color: #ffffff;
+		        background-color: red;
+		        font-family:leelawadee ui;
+	      	}
+	      	#loginButton:hover, #loginButton:active {
+		        color: #ffffff;
+		        background-color: #006635;
+		        font-family:leelawadee ui;
+	      	}
+	      	#aboutButton:hover, #aboutButton:active {
+		        color: #ffffff;
+		        background-color: #006635;
+		        font-family:leelawadee ui;
+	      	}
+	      	#name, #price, #price {
+	      		height: 10%;
+	      		width: 25%;
+	      	}
+	      	#descRow {
+	      		height: 10%;
+	      		width: 25%;
+	      		overflow: auto;
+	      	}
+	    </style>
+	</head>
+	<body class="notranslate" onpaste="return false">
+		<div style="background-color:#ffffff;border-radius: 25px;padding-bottom: 10px">
+			<input style="border:1px solid black;margin-left: 5%;width: 12.5%;padding: 5px;margin-top: 5px" type="button" value="About Page" id="aboutButton"/>
+			<h1>Home Page</h1>
+			<label id="emailLabel" style="margin-left: 74%;width: 12.5%" for="editEmail">Email: (optional) </label>
+			<input style="border:1px solid black;margin-left: 74%;width: 12.5%;padding: 5px" type="text" id="editEmail" placeholder="Add Email for Notifications"/>
+			<br>
+			<br>
+			<input style="border:1px solid black;margin-left: 12.5%;width: 12.5%;padding: 5px" type="button" value="Add Product" id="addProduct"/>
+			<input style="border:1px solid black;margin-left: 43.5%;width: 12.5%;padding: 5px" type="button" value="Login" id="loginButton"/>
+			<input style="border:1px dotted red;margin-left: 49.75%;width: 12.5%;padding: 5px" type="button" value="Logout" id="logout"/>
+			<br>
+			<br>
+			<table style = "width:75%;font-family:leelawadee ui;margin-left: 12.5%" border = "2 px solid black" id="table">
+				<th id = "name">Name</th>
+				<th id = "image">Image</th>
+				<th id = "description">Description</th>
+				<th id = "price">Price</th>
+				<th id = "stock">Stock</th>
+				<!-- add an up/down stock updater -->
+			</table>
+		</div>
+		<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+		<script src = "js/homePage.js"></script>
+	</body>
+</html>
