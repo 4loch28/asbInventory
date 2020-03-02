@@ -4,24 +4,21 @@ var express = require("express");
 var mongoose = require("mongoose");
 var Info = require("./models/Info");
 
-let myDatabase = function() {
-}
+let myDatabase = function() {}
 
 //add or modify.  Complete getAllObjects function.
 myDatabase.prototype.getAllObjects = function(res) {
-
-Info.find({},function(error,info) {
-	if (error) {
-		return res.json(null);
-	} else {
-		let objs = [];
-		for (let i=0;i<info.length;i++) {
-		  objs.push({name:info[i].name,description:info[i].description,price:info[i].price,stock:info[i].stock,image:info[i].image});
-		}
-		return res.json(objs);
-	}
-});
-
+    Info.find({},function(error,info) {
+        if (error) {
+            return res.json(null);
+        } else {
+            let objs = [];
+            for (let i=0;i<info.length;i++) {
+            objs.push({name:info[i].name,description:info[i].description,price:info[i].price,stock:info[i].stock,image:info[i].image});
+            }
+            return res.json(objs);
+        }
+    });
 }
 
 
