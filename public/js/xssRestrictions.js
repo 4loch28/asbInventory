@@ -1,3 +1,4 @@
+//@author Lochlin S. Craig
 var keybNumberAndAlpha = new keybEdit(' 0123456789abcdefghijklmnopqrstuvwxyz$@`~,"*+=-/_');
 
 function keybEdit(strValid, strMsg) {
